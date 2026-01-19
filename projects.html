@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Проекты</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="bg"></div>
+
+    <div class="container">
+      <div class="topRow">
+        <a class="btn btn--ghost" href="./index.html">← Назад</a>
+      </div>
+
+      <div class="strokeTitle strokeTitle--section">ПРОЕКТЫ</div>
+
+      <section class="projects">
+        <article class="projectCard">
+          <div class="projectCard__media"></div>
+
+          <div class="projectCard__content">
+            <h2 class="h2">Детектор Фишинга</h2>
+            <div class="p">
+              <b>Задача:</b> бинарная классификация текста (фишинг/не фишинг или спам/не спам) для входящих сообщений/писем.
+            </div>
+            <div class="p">
+              <b>Реализация:</b> датасет → токенизация → обучение модели (baseline TF‑IDF+Linear/LogReg и нейросеть на PyTorch) →
+              сравнение метрик → выбор лучшей модели.
+            </div>
+            <div class="p">
+              <b>Деплой:</b> REST API (FastAPI) + Docker; endpoint /predict, логирование входов/выходов, скрипт для пакетной проверки.
+            </div>
+            <div class="p">
+              <b>Стек:</b> Python, PyTorch, scikit‑learn, FastAPI, Docker.
+            </div>
+
+            <a class="btn btn--open" href="#" target="_blank" rel="noreferrer">/OPEN</a>
+          </div>
+        </article>
+
+        <article class="projectCard">
+          <div class="projectCard__media"></div>
+
+          <div class="projectCard__content">
+            <h2 class="h2">ИИ для изображений</h2>
+            <div class="p">
+              <b>Задача:</b> классификация изображений (например, “тип товара/дефект/категория” — выбирается под твою тему).
+            </div>
+            <div class="p">
+              <b>Реализация:</b> обучение CNN (transfer learning: ResNet/EfficientNet), аугментации, confusion matrix, анализ ошибок.
+            </div>
+            <div class="p">
+              <b>Продуктовая часть:</b> небольшой интерфейс (Streamlit/веб‑страница) для загрузки изображения и получения результата.
+            </div>
+            <div class="p">
+              <b>Стек:</b> PyTorch, torchvision, OpenCV, Streamlit (или FastAPI).
+            </div>
+
+            <a class="btn btn--open" href="#" target="_blank" rel="noreferrer">/OPEN</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
